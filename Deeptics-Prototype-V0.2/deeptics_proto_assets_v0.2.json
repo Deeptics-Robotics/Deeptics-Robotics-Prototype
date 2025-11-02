@@ -1,0 +1,1106 @@
+[
+  {
+    "asset_code": "DXW-MICRO",
+    "public_name": "MicroRover-\u03bc",
+    "class": "wheeled",
+    "subtype": "micro-diffdrive",
+    "status": "proto",
+    "orig_views": 4427,
+    "deeptics_views": 0,
+    "description": "Ultra-compact differential-drive rover for swarm & hallway SLAM.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXW-MICRO.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 2,
+    "payload_kg": 1.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-LiDAR-2D"
+    ],
+    "controller_presets": [
+      "EKF_fusion",
+      "DWA_planner",
+      "A*_global"
+    ]
+  },
+  {
+    "asset_code": "DXW-SCOUT",
+    "public_name": "ScoutRover",
+    "class": "wheeled",
+    "subtype": "diffdrive",
+    "status": "proto",
+    "orig_views": 2121,
+    "deeptics_views": 0,
+    "description": "Small indoor/outdoor rover for mapping, nav, and sensor bring-up.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXW-SCOUT.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 2,
+    "payload_kg": 4.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-LiDAR-2D"
+    ],
+    "controller_presets": [
+      "EKF_fusion",
+      "DWA_planner",
+      "A*_global"
+    ]
+  },
+  {
+    "asset_code": "DXM-OMNIARM",
+    "public_name": "OmniBase+Arm",
+    "class": "mobile_manipulator",
+    "subtype": "omni-base+5DoF",
+    "status": "proto",
+    "orig_views": 2118,
+    "deeptics_views": 0,
+    "description": "Compact omnidirectional base with light manipulator for Fetch tasks.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXM-OMNIARM.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 10,
+    "payload_kg": 3.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-LiDAR-2D"
+    ],
+    "controller_presets": [
+      "DWA_planner",
+      "A*_global",
+      "joint_space_PD"
+    ]
+  },
+  {
+    "asset_code": "DXH-COMPACT",
+    "public_name": "Humanoid-Compact",
+    "class": "humanoid",
+    "subtype": "small-biped",
+    "status": "proto",
+    "orig_views": 2059,
+    "deeptics_views": 0,
+    "description": "Compact biped for balance, gesture, and HRI experiments.",
+    "interfaces": {
+      "control": [
+        "CTRL-Locomotion"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXH-COMPACT.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 20,
+    "payload_kg": 0.5,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-Stereo"
+    ],
+    "controller_presets": [
+      "gait_walk",
+      "push_recovery",
+      "whole_body_QP"
+    ]
+  },
+  {
+    "asset_code": "DXA-5E",
+    "public_name": "CollabArm-5e",
+    "class": "manipulator",
+    "subtype": "6DoF-collab",
+    "status": "proto",
+    "orig_views": 2027,
+    "deeptics_views": 0,
+    "description": "6\u2011DoF collaborative arm for pick/place and policy learning.",
+    "interfaces": {
+      "control": [
+        "CTRL-Manipulation"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXA-5E.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 6,
+    "payload_kg": 5.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-FT",
+      "SM-Tactile"
+    ],
+    "controller_presets": [
+      "joint_space_PD",
+      "task_space_impedance",
+      "RRT_connect",
+      "IK_solvers"
+    ]
+  },
+  {
+    "asset_code": "DXF-INSPECT",
+    "public_name": "QuadRotor-Inspect",
+    "class": "aerial",
+    "subtype": "quadrotor",
+    "status": "proto",
+    "orig_views": 1583,
+    "deeptics_views": 0,
+    "description": "Stabilized quad for indoor/outdoor waypoint & inspection trials.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXF-INSPECT.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 6,
+    "payload_kg": 1.5,
+    "sensor_default": [
+      "SM-IMU",
+      "SM-Stereo",
+      "SM-RGBD"
+    ],
+    "controller_presets": [
+      "LQR_attitude",
+      "waypoint_P",
+      "VIO_loops"
+    ]
+  },
+  {
+    "asset_code": "DXW-MINI",
+    "public_name": "MiniRover-TB",
+    "class": "wheeled",
+    "subtype": "mini-diffdrive",
+    "status": "proto",
+    "orig_views": 1336,
+    "deeptics_views": 0,
+    "description": "Lightweight mini rover for education, ROS2, and quick prototyping.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXW-MINI.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 2,
+    "payload_kg": 4.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-LiDAR-2D"
+    ],
+    "controller_presets": [
+      "EKF_fusion",
+      "DWA_planner",
+      "A*_global"
+    ]
+  },
+  {
+    "asset_code": "DXA-10E",
+    "public_name": "CollabArm-10e",
+    "class": "manipulator",
+    "subtype": "6DoF-collab-longreach",
+    "status": "proto",
+    "orig_views": 1234,
+    "deeptics_views": 0,
+    "description": "Extended\u2011reach 6\u2011DoF arm for palletizing and workspace coverage.",
+    "interfaces": {
+      "control": [
+        "CTRL-Manipulation"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXA-10E.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 6,
+    "payload_kg": 10.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-FT",
+      "SM-Tactile"
+    ],
+    "controller_presets": [
+      "joint_space_PD",
+      "task_space_impedance",
+      "RRT_connect",
+      "IK_solvers"
+    ]
+  },
+  {
+    "asset_code": "DXF-MICRO",
+    "public_name": "MicroQuad",
+    "class": "aerial",
+    "subtype": "micro-quad",
+    "status": "proto",
+    "orig_views": 1191,
+    "deeptics_views": 0,
+    "description": "Palm\u2011sized quadrotor for VIO and constrained\u2011space flight.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXF-MICRO.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 6,
+    "payload_kg": 0.03,
+    "sensor_default": [
+      "SM-IMU",
+      "SM-Stereo",
+      "SM-RGBD"
+    ],
+    "controller_presets": [
+      "LQR_attitude",
+      "waypoint_P",
+      "VIO_loops"
+    ]
+  },
+  {
+    "asset_code": "DXQ-AGILE",
+    "public_name": "Quadruped-Agile",
+    "class": "legged",
+    "subtype": "quadruped",
+    "status": "proto",
+    "orig_views": 1172,
+    "deeptics_views": 0,
+    "description": "Agile quad for foothold planning and uneven\u2011terrain traversal.",
+    "interfaces": {
+      "control": [
+        "CTRL-Locomotion"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXQ-AGILE.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 12,
+    "payload_kg": 6.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-LiDAR-3D"
+    ],
+    "controller_presets": [
+      "gait_trot",
+      "gait_walk",
+      "whole_body_QP"
+    ]
+  },
+  {
+    "asset_code": "DXW-P3DX",
+    "public_name": "Rover-P3DX",
+    "class": "wheeled",
+    "subtype": "diffdrive-legacy",
+    "status": "proto",
+    "orig_views": 987,
+    "deeptics_views": 0,
+    "description": "Baseline diff\u2011drive platform for classical nav benchmarks.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXW-P3DX.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 2,
+    "payload_kg": 4.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-LiDAR-2D"
+    ],
+    "controller_presets": [
+      "EKF_fusion",
+      "DWA_planner",
+      "A*_global"
+    ]
+  },
+  {
+    "asset_code": "DXW-K4",
+    "public_name": "MicroRover-K4",
+    "class": "wheeled",
+    "subtype": "micro-diffdrive",
+    "status": "proto",
+    "orig_views": 913,
+    "deeptics_views": 0,
+    "description": "Micro research rover with tight\u2011space maneuverability.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXW-K4.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 2,
+    "payload_kg": 1.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-LiDAR-2D"
+    ],
+    "controller_presets": [
+      "EKF_fusion",
+      "DWA_planner",
+      "A*_global"
+    ]
+  },
+  {
+    "asset_code": "DXA-IND4600",
+    "public_name": "IndustArm-4600",
+    "class": "manipulator",
+    "subtype": "6DoF-industrial",
+    "status": "proto",
+    "orig_views": 856,
+    "deeptics_views": 0,
+    "description": "High\u2011payload industrial arm for cycle\u2011time and reach tests.",
+    "interfaces": {
+      "control": [
+        "CTRL-Manipulation"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXA-IND4600.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 6,
+    "payload_kg": 60.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-FT",
+      "SM-Tactile"
+    ],
+    "controller_presets": [
+      "joint_space_PD",
+      "task_space_impedance",
+      "RRT_connect",
+      "IK_solvers"
+    ]
+  },
+  {
+    "asset_code": "DXH-MINI3",
+    "public_name": "Humanoid-Mini3",
+    "class": "humanoid",
+    "subtype": "small-biped",
+    "status": "proto",
+    "orig_views": 822,
+    "deeptics_views": 0,
+    "description": "Mini humanoid for locomotion primitives and vision\u2011in\u2011the\u2011loop.",
+    "interfaces": {
+      "control": [
+        "CTRL-Locomotion"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXH-MINI3.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 16,
+    "payload_kg": 0.5,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-Stereo"
+    ],
+    "controller_presets": [
+      "gait_walk",
+      "push_recovery",
+      "whole_body_QP"
+    ]
+  },
+  {
+    "asset_code": "DXH-MINI2",
+    "public_name": "Humanoid-Mini2",
+    "class": "humanoid",
+    "subtype": "small-biped",
+    "status": "proto",
+    "orig_views": 805,
+    "deeptics_views": 0,
+    "description": "Prior\u2011gen mini humanoid for regression testing and curriculum.",
+    "interfaces": {
+      "control": [
+        "CTRL-Locomotion"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXH-MINI2.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 16,
+    "payload_kg": 0.5,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-Stereo"
+    ],
+    "controller_presets": [
+      "gait_walk",
+      "push_recovery",
+      "whole_body_QP"
+    ]
+  },
+  {
+    "asset_code": "DXM-TORSO",
+    "public_name": "Tiago\u2011Class",
+    "class": "mobile_manipulator",
+    "subtype": "torso+arm",
+    "status": "proto",
+    "orig_views": 756,
+    "deeptics_views": 0,
+    "description": "Mobile manipulator with lifting torso for service\u2011robot tasks.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXM-TORSO.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 10,
+    "payload_kg": 3.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-LiDAR-2D"
+    ],
+    "controller_presets": [
+      "DWA_planner",
+      "A*_global",
+      "joint_space_PD"
+    ]
+  },
+  {
+    "asset_code": "DXW-P3AT",
+    "public_name": "Rover-P3AT",
+    "class": "wheeled",
+    "subtype": "all\u2011terrain",
+    "status": "proto",
+    "orig_views": 753,
+    "deeptics_views": 0,
+    "description": "All\u2011terrain variant for gravel/grass/incline navigation.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXW-P3AT.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 2,
+    "payload_kg": 4.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-LiDAR-2D"
+    ],
+    "controller_presets": [
+      "EKF_fusion",
+      "DWA_planner",
+      "A*_global"
+    ]
+  },
+  {
+    "asset_code": "DXA-DESK",
+    "public_name": "DeskArm\u2011N",
+    "class": "manipulator",
+    "subtype": "6DoF-desktop",
+    "status": "proto",
+    "orig_views": 736,
+    "deeptics_views": 0,
+    "description": "Desktop 6\u2011DoF arm for lab bench assembly and policy tests.",
+    "interfaces": {
+      "control": [
+        "CTRL-Manipulation"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXA-DESK.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 6,
+    "payload_kg": 1.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-FT",
+      "SM-Tactile"
+    ],
+    "controller_presets": [
+      "joint_space_PD",
+      "task_space_impedance",
+      "RRT_connect",
+      "IK_solvers"
+    ]
+  },
+  {
+    "asset_code": "DXW-SCOUTXL",
+    "public_name": "ScoutRover\u2011XL",
+    "class": "wheeled",
+    "subtype": "diffdrive-heavy",
+    "status": "proto",
+    "orig_views": 731,
+    "deeptics_views": 0,
+    "description": "Large\u2011footprint rover for payloaded mapping and autonomy.",
+    "interfaces": {
+      "control": [
+        "NAV-SLAM"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXW-SCOUTXL.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 2,
+    "payload_kg": 15.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-LiDAR-2D"
+    ],
+    "controller_presets": [
+      "EKF_fusion",
+      "DWA_planner",
+      "A*_global"
+    ]
+  },
+  {
+    "asset_code": "DXA-P7",
+    "public_name": "CollabArm\u2011P7",
+    "class": "manipulator",
+    "subtype": "7DoF-collab",
+    "status": "proto",
+    "orig_views": 663,
+    "deeptics_views": 0,
+    "description": "7\u2011DoF collaborative arm with rich redundancy for constrained reach.",
+    "interfaces": {
+      "control": [
+        "CTRL-Manipulation"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXA-P7.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 7,
+    "payload_kg": 7.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-FT",
+      "SM-Tactile"
+    ],
+    "controller_presets": [
+      "joint_space_PD",
+      "task_space_impedance",
+      "RRT_connect",
+      "IK_solvers"
+    ]
+  },
+  {
+    "asset_code": "DXA-3E",
+    "public_name": "CollabArm\u20113e",
+    "class": "manipulator",
+    "subtype": "6DoF-compact",
+    "status": "proto",
+    "orig_views": 587,
+    "deeptics_views": 0,
+    "description": "Compact 6\u2011DoF arm for tight workcells and benchtop tasks.",
+    "interfaces": {
+      "control": [
+        "CTRL-Manipulation"
+      ],
+      "sensors": [
+        "SM-RGBD",
+        "SM-IMU"
+      ],
+      "telemetry": [
+        "metrics.json",
+        "run.log"
+      ]
+    },
+    "posml": {
+      "package": "v0.1",
+      "manifest": "DXA-3E.manifest.json",
+      "metrics": [
+        "task_success_rate",
+        "energy_proxy",
+        "latency_ms"
+      ]
+    },
+    "safety": {
+      "limits": true,
+      "workspace_guard": true,
+      "failsafe_halt": true
+    },
+    "compatibility": [
+      "DX-Sim R0.1"
+    ],
+    "dof": 6,
+    "payload_kg": 3.0,
+    "sensor_default": [
+      "SM-RGBD",
+      "SM-IMU",
+      "SM-FT",
+      "SM-Tactile"
+    ],
+    "controller_presets": [
+      "joint_space_PD",
+      "task_space_impedance",
+      "RRT_connect",
+      "IK_solvers"
+    ]
+  }
+]

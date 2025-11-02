@@ -1,0 +1,142 @@
+#VRML_SIM R2025a utf8
+
+PROTO DEEPTICS [
+  field SFRotation rotation 0 0 1 0
+  field SFString name "DEEPTICS"
+  field SFVec3f translation 0 0 0.334
+  field SFColor color 0.2 0.4 0.8
+  field SFFloat scale 1.0
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    model "DEEPTICS"
+    description "DEEPTICS Humanoid Robot"
+    
+    children [
+      # Main Body
+      Transform {
+        translation 0 0 0
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor IS color
+              metalness 0.1
+              roughness 0.3
+            }
+            geometry Box {
+              size 0.15 0.08 0.25
+            }
+          }
+        ]
+      }
+      
+      # Head
+      Transform {
+        translation 0 0 0.15
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor IS color
+              metalness 0.1
+              roughness 0.3
+            }
+            geometry Sphere {
+              radius 0.06
+            }
+          }
+        ]
+      }
+      
+      # Left Arm
+      Transform {
+        translation -0.1 0 0.08
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor IS color
+              metalness 0.1
+              roughness 0.3
+            }
+            geometry Cylinder {
+              height 0.2
+              radius 0.02
+            }
+          }
+        ]
+      }
+      
+      # Right Arm
+      Transform {
+        translation 0.1 0 0.08
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor IS color
+              metalness 0.1
+              roughness 0.3
+            }
+            geometry Cylinder {
+              height 0.2
+              radius 0.02
+            }
+          }
+        ]
+      }
+      
+      # Left Leg
+      Transform {
+        translation -0.04 0 -0.2
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor IS color
+              metalness 0.1
+              roughness 0.3
+            }
+            geometry Cylinder {
+              height 0.25
+              radius 0.025
+            }
+          }
+        ]
+      }
+      
+      # Right Leg
+      Transform {
+        translation 0.04 0 -0.2
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor IS color
+              metalness 0.1
+              roughness 0.3
+            }
+            geometry Cylinder {
+              height 0.25
+              radius 0.025
+            }
+          }
+        ]
+      }
+    ]
+    
+    contactMaterial "DEEPTICS_material"
+    boundingObject Transform {
+      translation 0 0 0
+      children [
+        Box {
+          size 0.2 0.1 0.5
+        }
+      ]
+    }
+    
+    physics Physics {
+      density -1
+      mass 4.5
+      centerOfMass 0 0 0
+    }
+  }
+}
